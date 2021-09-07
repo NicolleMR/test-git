@@ -2,10 +2,17 @@ body {
     margin: 0;
     padding: 0;
 }
-header {
+.header {
     background-color: #3A6073;
     padding: 1.5rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
+    &__link {
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+    }
 }
+
