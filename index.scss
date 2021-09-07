@@ -23,6 +23,18 @@ body {
     }
 }
 .main {
+    background-image: url(./images/fondo.jpg);
+    background-size: cover;
     text-align: center;
+    height: calc(100vh - 112px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &__title {
+        margin: 0;
+        font-size: 3.4rem;
+        color: #bf13e9;
+    }
 }
 
