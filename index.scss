@@ -11,7 +11,8 @@ body {
 
     &__link {
         text-decoration: none;
-        color: white;
+        color: #787878;
+        font-weight: bold;
         font-size: 1.3rem;
         &:hover {
             text-decoration: underline;
@@ -24,6 +25,8 @@ body {
     &__icon {
         margin-left: 1.5rem;
         width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
     }
 }
 .main {
@@ -38,7 +41,7 @@ body {
     &__title {
         margin: 0;
         font-size: 3.4rem;
-        color: #bf13e9;
+        color: #4c5da6;
     }
 }
 
