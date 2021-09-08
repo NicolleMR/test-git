@@ -9,6 +9,23 @@ body {
     justify-content: space-between;
     align-items: center;
 
+    &__hamburguer {
+        background-color: transparent;
+        border: transparent;
+        display: none;
+        @media (max-width: 800px) {
+            display: inline-block;
+        }
+    }
+    &__hamburguer i {
+        color: #4f5e9c;
+        font-size: 1.3rem;
+    }
+    &__ancor {
+        @media (max-width: 800px) {
+            display: none;
+        }
+    }
     &__link {
         text-decoration: none;
         color: #787878;
