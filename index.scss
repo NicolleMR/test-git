@@ -3,8 +3,8 @@ body {
     padding: 0;
 }
 .header {
-    background-color: #3A6073;
-    padding: 1.5rem;
+    background-color: #BDE1E0;
+    padding: 0.9rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,7 +12,10 @@ body {
     &__link {
         text-decoration: none;
         color: white;
-        font-size: 1rem;
+        font-size: 1.3rem;
+        &:hover {
+            text-decoration: underline;
+        }
 
         &:not(last-child) {
             margin-right: 2rem;
@@ -20,13 +23,14 @@ body {
     }
     &__icon {
         margin-left: 1.5rem;
+        width: 2.5rem;
     }
 }
 .main {
     background-image: url(./images/fondo.jpg);
     background-size: cover;
     text-align: center;
-    height: calc(100vh - 112px);
+    height: calc(100vh - 69px);
     display: flex;
     justify-content: center;
     align-items: center;
