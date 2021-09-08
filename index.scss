@@ -3,8 +3,8 @@ body {
     padding: 0;
 }
 .header {
-    background-color: #3A6073;
-    padding: 1.5rem;
+    background-color: #e8b5f5;
+    padding: 0.9rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,7 +12,10 @@ body {
     &__link {
         text-decoration: none;
         color: white;
-        font-size: 1rem;
+        font-size: 1.2rem;
+        &:hover {
+            text-decoration: underline;
+        }
 
         &:not(last-child) {
             margin-right: 2rem;
@@ -20,6 +23,7 @@ body {
     }
     &__icon {
         margin-left: 1.5rem;
+        width: 2.5rem;
     }
 }
 .main {
