@@ -21,6 +21,11 @@ body {
     &__hamburguer i {
         color: #4f5e9c;
         font-size: 1.3rem;
+        transition: all 0.3s linear;
+        &:hover {
+            color: #ee8e3f;
+            transform: rotate(360deg);
+        }
     }
     &__nav{
         @media (max-width: 800px) {
@@ -79,4 +84,8 @@ body {
         color: #4c5da6;
     }
 }
+.show-sidebar {
+    transform: translate(0);
+}
+
 
