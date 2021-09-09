@@ -1,13 +1,22 @@
+$grey-header: #d2d2d4;
 body {
     margin: 0;
     padding: 0;
+   
 }
 .header {
-    padding: 1rem 2.5rem;
-    background-color: #BDE1E0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 26px;
+    border-bottom: 2px solid rgba(176,176,176, 0.3);
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    padding: 0.6rem 2.5rem;
+    background-color: transparent;
+
 
   
     &__hamburguer {
@@ -19,24 +28,23 @@ body {
         }
     }
     &__hamburguer i {
-        color: #4f5e9c;
+        color: black;
         font-size: 1.3rem;
         transition: all 0.3s linear;
         cursor: pointer;
         &:hover {
-            color: #ee8e3f;
+            color: white;
             transform: rotate(360deg);
         }
     }
     &__nav{
         @media (max-width: 800px) {
+            background-color: transparent;
             padding: 0 2rem;
-            background-color: #BDE1E0;
             position: fixed;
             right: -100%;
             top: 72px;
             bottom: 0;
-            background: #BDE1E0;
             transition: 1s;
         }
     }
@@ -53,7 +61,7 @@ body {
     }
     &__link {
         text-decoration: none;
-        color: #787878;
+        color: black;
         font-weight: bold;
         font-size: 1.3rem;
         &:not(:last-child) {
@@ -61,7 +69,7 @@ body {
         }
         &:hover {
             text-decoration: underline;
-            color: #1F8FD8;
+            color: white;
             transition: 1s;
         }
         @media (max-width: 800px) {
@@ -69,24 +77,52 @@ body {
         }
     }
     &__icon {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 3.5rem;
+        height: 3.5rem;
         border-radius: 50%;
     }
 }
 .main {
-    background-image: url(./images/fondo.jpg);
-    background-size: cover;
-    text-align: center;
-    height: calc(100vh - 69px);
+    background-image: url(./images/main.jpg);
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
+    background-size: cover;
     align-items: center;
+    flex-direction: column;
     
+    &__img {
+        height: 28rem;
+        border-radius: 2rem;
+    }
     &__title {
-        margin: 0;
         font-size: 3.4rem;
-        color: #4c5da6;
+        color: black;
+        border: 3px solid black;
+        padding: 1rem 3rem;
+        font-style: italic;
+        margin: 12rem 0 3rem;
+    }
+    &__subtitle-container {
+        text-align: center;
+    }
+    
+    &__subtitle {
+        font-style: italic;
+        font-size: 1.7rem;
+        color: black;
+        margin: 0 0 1rem ;
+        border-bottom: 0.2rem solid black;
+    }
+    &__down {
+        color: black;
+        font-size: 2rem;
+        &:hover {
+            color: white;
+            cursor: pointer;
+            transition: 1s;
+        }
     }
 }
 .show-slidebar {
