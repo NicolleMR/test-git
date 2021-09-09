@@ -3,12 +3,13 @@ body {
     padding: 0;
 }
 .header {
+    padding: 1rem 2.5rem;
     background-color: #BDE1E0;
-    padding: 0.9rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+  
     &__hamburguer {
         background-color: transparent;
         border: transparent;
@@ -20,12 +21,28 @@ body {
     &__hamburguer i {
         color: #4f5e9c;
         font-size: 1.3rem;
-        margin-right: 1rem;
     }
-    &__ancor {
+    &__nav{
         @media (max-width: 800px) {
-            display: none;
+            padding: 0 2rem;
+            background-color: #BDE1E0;
+            position: fixed;
+            right: 0;
+            top: 72px;
+            bottom: 0;
+            background: #BDE1E0;
         }
+    }
+    &__ancors {
+        padding: 0;
+        display: flex;
+        letter-spacing: 0.25rem;
+        @media (max-width: 800px) {
+            display: flex;
+            flex-direction: column;
+            text-align: justify;
+        }
+     
     }
     &__link {
         text-decoration: none;
@@ -34,14 +51,14 @@ body {
         font-size: 1.3rem;
         &:hover {
             text-decoration: underline;
+            color: #1F8FD8;
+            transition: 1s;
         }
-
-        &:not(last-child) {
-            margin-right: 2rem;
+        @media (max-width: 800px) {
+            margin: 1.3rem 0 1rem;
         }
     }
     &__icon {
-        margin-left: 1.5rem;
         width: 2.5rem;
         height: 2.5rem;
         border-radius: 50%;
