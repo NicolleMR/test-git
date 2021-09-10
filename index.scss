@@ -1,4 +1,43 @@
-$grey-header: #d2d2d4;
+$baseFontSize: 16;
+@function px2rem($px){
+    @return $px / $baseFontSize * 1rem;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts/Raleway-Bold.ttf') format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts/Raleway-ExtraLight.ttf') format("truetype");
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts/Raleway-Medium.ttf') format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts/Raleway-Regular.ttf') format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts//Raleway-SemiBold.ttf') format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts/Raleway-Thin.ttf') format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
 body {
     margin: 0;
     padding: 0;
@@ -98,11 +137,11 @@ body {
     }
     &__title {
         font-size: 3.4rem;
-        color: black;
-        border: 3px solid black;
+        color: #663131;
+        border: 3px solid #663131;
         padding: 1rem 3rem;
         font-style: italic;
-        margin: 12rem 0 3rem;
+        margin: 11rem 0 3rem;
     }
     &__subtitle-container {
         text-align: center;
@@ -128,6 +167,72 @@ body {
 .show-slidebar {
     right: 0;
 
+}
+.products {
+    padding: px2rem(70);
+
+    &__container {
+        background-color: #F8F5F0;
+        padding: 0 3rem;
+    }
+    &__title {
+        color: #844A28;
+        font-style: italic;
+        font-size: 2.8rem;
+        text-align: center;
+        margin: 0;
+        padding: 35px 0;
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 2rem;
+    }
+
+    &__img {
+        width: 100%;
+        height: 352px;
+        background-size: cover;
+        cursor: pointer;
+    }
+    &__target {
+        position: relative;
+    }
+    &__info {
+        position: absolute;
+        top: px2rem(42);
+        left: px2rem(30);
+        display: flex;
+        flex-direction: column;
+    }
+    &__name {
+        font-size: px2rem(29);
+        font-family: 'Raleway';
+        color: #844A28;
+        text-shadow: #844A28 1px 0;
+        
+    }
+    &__span {
+        font-size: px2rem(17);
+        font-weight: bold;
+        font-family: 'Raleway';
+        color: #844A28;
+    }
+    &__price {
+        font-size: px2rem(70);
+        line-height: px2rem(50);
+        font-weight: bold;
+        font-family: 'Raleway';
+        color: #844A28;
+        padding-left: px2rem(14);
+        &::before {
+            content: "$";
+            font-size: px2rem(30);
+            position: absolute;
+            left: px2rem(-5);
+            top: px2rem(58);
+        }
+    }
 }
 
 
