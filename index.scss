@@ -57,6 +57,7 @@ body {
     background-color: transparent;
     left: 0;
     right: 0;
+    transition: 1s;
 
     &__hamburguer {
         background-color: transparent;
@@ -76,15 +77,15 @@ body {
             transform: rotate(360deg);
         }
     }
-    &__nav{
+    &__nav {
         @media (max-width: 800px) {
-            background-color: transparent;
             padding: 0 px2rem(32);
             position: fixed;
             right: -100%;
-            top: px2rem(72);
             bottom: 0;
             transition: 1s;
+            background-color: white;
+            top: px2rem(77);
         }
     }
     &__ancors {
@@ -185,7 +186,7 @@ body {
     }
     &__grid {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(auto-fill, minmax(px2rem(340), 1fr));
         grid-gap: px2rem(32);
     }
 
@@ -218,6 +219,7 @@ body {
         color: #844A28;
     }
     &__price {
+        position: relative;
         font-size: px2rem(70);
         line-height: px2rem(50);
         font-weight: bold;
@@ -228,10 +230,19 @@ body {
             content: "$";
             font-size: px2rem(30);
             position: absolute;
-            left: px2rem(-5);
-            top: px2rem(58);
+            left: px2rem(-6);
+            top: px2rem(-8);
         }
     }
 }
 
-
+.is-scrolled {
+    background-color: rgb(176,176,176);
+    .header__link {
+        color: white;
+        @media (max-width: 800px) {
+            color: black;
+        }
+    }
+    
+}
