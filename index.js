@@ -1,6 +1,6 @@
 const hamburguerBtn = document.querySelector('.header__hamburguer');
 const slideBar = document.querySelector('.header__nav');
-let header = document.querySelector('.header');
+const header = document.querySelector('.header');
 
 
 hamburguerBtn.addEventListener('click',() => {
