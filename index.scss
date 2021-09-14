@@ -1,24 +1,63 @@
-$grey-header: #d2d2d4;
+$baseFontSize: 16;
+@function px2rem($px){
+    @return $px / $baseFontSize * 1rem;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts/Raleway-Bold.ttf') format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts/Raleway-ExtraLight.ttf') format("truetype");
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts/Raleway-Medium.ttf') format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts/Raleway-Regular.ttf') format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts//Raleway-SemiBold.ttf') format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts/Raleway-Thin.ttf') format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     padding: 0;
-   
 }
 .header {
+    z-index: 100;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 26px;
-    border-bottom: 2px solid rgba(176,176,176, 0.3);
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: 0;
-    padding: 0.6rem 2.5rem;
+    padding: px2rem(26);
+    border-bottom: px2rem(2) solid rgba(176,176,176, 0.3);
+    padding: px2rem(9.6) px2rem(40);
     background-color: transparent;
+    left: 0;
+    right: 0;
 
-
-  
     &__hamburguer {
         background-color: transparent;
         border: transparent;
@@ -29,7 +68,7 @@ body {
     }
     &__hamburguer i {
         color: black;
-        font-size: 1.3rem;
+        font-size: px2rem(20.8);
         transition: all 0.3s linear;
         cursor: pointer;
         &:hover {
@@ -40,10 +79,10 @@ body {
     &__nav{
         @media (max-width: 800px) {
             background-color: transparent;
-            padding: 0 2rem;
+            padding: 0 px2rem(32);
             position: fixed;
             right: -100%;
-            top: 72px;
+            top: px2rem(72);
             bottom: 0;
             transition: 1s;
         }
@@ -51,7 +90,7 @@ body {
     &__ancors {
         padding: 0;
         display: flex;
-        letter-spacing: 1px;
+        letter-spacing: px2rem(1);
         @media (max-width: 800px) {
             display: flex;
             flex-direction: column;
@@ -63,9 +102,9 @@ body {
         text-decoration: none;
         color: black;
         font-weight: bold;
-        font-size: 1.3rem;
+        font-size: px2rem(20.8);
         &:not(:last-child) {
-            margin-right: 1.3rem;
+            margin-right: px2rem(20.8);
         }
         &:hover {
             text-decoration: underline;
@@ -73,12 +112,12 @@ body {
             transition: 1s;
         }
         @media (max-width: 800px) {
-            margin: 1.3rem 0 1rem;
+            margin: px2rem(20.8) 0 px2rem(16);
         }
     }
     &__icon {
-        width: 3.5rem;
-        height: 3.5rem;
+        width: px2rem(56);
+        height: px2rem(56);
         border-radius: 50%;
     }
 }
@@ -93,16 +132,16 @@ body {
     flex-direction: column;
     
     &__img {
-        height: 28rem;
-        border-radius: 2rem;
+        height: px2rem(448);
+        border-radius: px2rem(32);
     }
     &__title {
-        font-size: 3.4rem;
-        color: black;
-        border: 3px solid black;
-        padding: 1rem 3rem;
+        font-size: px2rem(54.4);
+        color: #663131;
+        border: px2rem(2) solid #663131;
+        padding: px2rem(16) px2rem(48);
         font-style: italic;
-        margin: 12rem 0 3rem;
+        margin: px2rem(176) 0 px2rem(48);
     }
     &__subtitle-container {
         text-align: center;
@@ -110,14 +149,14 @@ body {
     
     &__subtitle {
         font-style: italic;
-        font-size: 1.7rem;
+        font-size: px2rem(27.2);
         color: black;
-        margin: 0 0 1rem ;
-        border-bottom: 0.2rem solid black;
+        margin: 0 0 px2rem(16) ;
+        border-bottom: px2rem(3.2) solid black;
     }
     &__down {
         color: black;
-        font-size: 2rem;
+        font-size: px2rem(32);
         &:hover {
             color: white;
             cursor: pointer;
@@ -128,6 +167,71 @@ body {
 .show-slidebar {
     right: 0;
 
+}
+.products {
+    padding: px2rem(70);
+
+    &__container {
+        background-color: #F8F5F0;
+        padding: 0 px2rem(48);
+    }
+    &__title {
+        color: #844A28;
+        font-style: italic;
+        font-size: px2rem(44.8);
+        text-align: center;
+        margin: 0;
+        padding: px2rem(35) 0;
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: px2rem(32);
+    }
+
+    &__img {
+        width: 100%;
+        height: px2rem(352);
+        background-size: cover;
+        cursor: pointer;
+    }
+    &__target {
+        position: relative;
+    }
+    &__info {
+        position: absolute;
+        top: px2rem(42);
+        left: px2rem(30);
+        display: flex;
+        flex-direction: column;
+    }
+    &__name {
+        font-size: px2rem(29);
+        font-family: 'Raleway';
+        color: #844A28;
+        
+    }
+    &__span {
+        font-size: px2rem(17);
+        font-weight: bold;
+        font-family: 'Raleway';
+        color: #844A28;
+    }
+    &__price {
+        font-size: px2rem(70);
+        line-height: px2rem(50);
+        font-weight: bold;
+        font-family: 'Raleway';
+        color: #844A28;
+        padding-left: px2rem(14);
+        &::before {
+            content: "$";
+            font-size: px2rem(30);
+            position: absolute;
+            left: px2rem(-5);
+            top: px2rem(58);
+        }
+    }
 }
 
 
