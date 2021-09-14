@@ -143,6 +143,9 @@ body {
         padding: px2rem(16) px2rem(48);
         font-style: italic;
         margin: px2rem(176) 0 px2rem(48);
+        @media (max-width: 800px) {
+            font-size: px2rem(30);
+        }
     }
     &__subtitle-container {
         text-align: center;
@@ -175,6 +178,9 @@ body {
     &__container {
         background-color: #F8F5F0;
         padding: 0 px2rem(48);
+        @media (max-width: 800px) {
+            padding: 0;
+        }
     }
     &__title {
         color: #844A28;
@@ -183,6 +189,10 @@ body {
         text-align: center;
         margin: 0;
         padding: px2rem(35) 0;
+        @media (max-width: 800px) {
+            font-size: px2rem(30);
+            padding: px2rem(22) px2rem(46);
+        }
     }
     &__grid {
         display: grid;
