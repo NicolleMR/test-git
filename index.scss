@@ -38,26 +38,26 @@ $baseFontSize: 16;
     font-weight: 100;
     font-style: normal;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     padding: 0;
-   
 }
 .header {
+    z-index: 100;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: px2rem(26);
     border-bottom: px2rem(2) solid rgba(176,176,176, 0.3);
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: 0;
     padding: px2rem(9.6) px2rem(40);
     background-color: transparent;
+    left: 0;
+    right: 0;
 
-
-  
     &__hamburguer {
         background-color: transparent;
         border: transparent;
@@ -138,7 +138,7 @@ body {
     &__title {
         font-size: px2rem(54.4);
         color: #663131;
-        border: px2rem(48) solid #663131;
+        border: px2rem(2) solid #663131;
         padding: px2rem(16) px2rem(48);
         font-style: italic;
         margin: px2rem(176) 0 px2rem(48);
@@ -209,7 +209,6 @@ body {
         font-size: px2rem(29);
         font-family: 'Raleway';
         color: #844A28;
-        text-shadow: #844A28 px2rem(16) 0;
         
     }
     &__span {
