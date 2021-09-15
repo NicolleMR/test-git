@@ -2,6 +2,53 @@ const hamburguerBtn = document.querySelector('.header__hamburguer');
 const slideBar = document.querySelector('.header__nav');
 const header = document.querySelector('.header');
 
+const cards = [ {
+    id: 1,
+    img: './images/photo2.jpg',
+    buttonText: "Shop Livingroom",
+},
+{
+    id: 2,
+    img: './images/photo3.jpg',
+    buttonText: "Shop fireplace",
+},
+{
+    id: 1,
+    img: './images/photo4.jpg',
+    buttonText: "Shop paintings",
+}
+];
+
+const arrowPrevious = document.querySelector('.js-previous')
+const arrowNext = document.querySelector('.js-next')
+const button = document.querySelector('.carousel__button')
+const img = document.querySelector('.carousel__img');
+
+let currentItem = 0;
+
+function showImage() {
+    const item = cards[currentItem];
+    img.src = item.img;
+    button.textContent = item.buttonText;
+};
+
+arrowNext.addEventListener('click', () => {
+    currentItem++;
+    if (currentItem > cards.length -1) {
+        currentItem = 0;
+    }
+    showImage();
+});
+
+arrowPrevious.addEventListener('click', () => {
+    currentItem--;
+    if (currentItem < 0) {
+        currentItem = cards.length -1
+    }
+    showImage();
+});
+
+
 
 hamburguerBtn.addEventListener('click',() => {
     if (slideBar.classList.contains('show-slidebar')) {
