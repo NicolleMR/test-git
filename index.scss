@@ -177,7 +177,7 @@ body {
 
     &__container {
         background-color: #F8F5F0;
-        padding: 0 px2rem(48);
+        padding: 0 px2rem(48) px2rem(48);
         @media (max-width: 800px) {
             padding: 0;
         }
