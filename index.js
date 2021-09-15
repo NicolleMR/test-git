@@ -2,6 +2,25 @@ const hamburguerBtn = document.querySelector('.header__hamburguer');
 const slideBar = document.querySelector('.header__nav');
 const header = document.querySelector('.header');
 
+const cards = [ {
+    id: 1,
+    img: 'assets/imagines/photo2.jpg',
+    buttonText: "Shop Livingroom"
+},
+{
+    id: 2,
+    img: 'assets/imagines/photo3.jpg',
+    buttonText: "Shop fireplace"
+},
+{
+    id: 1,
+    img: 'assets/imagines/photo4.jpg',
+    buttonText: "Shop paintings"
+}
+];
+
+const arrowPrevious = document.querySelector('.js-previous')
+const arrowPrevious = document.querySelector('.js-next')
 
 hamburguerBtn.addEventListener('click',() => {
     if (slideBar.classList.contains('show-slidebar')) {

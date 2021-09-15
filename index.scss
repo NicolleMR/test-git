@@ -173,7 +173,7 @@ body {
 
 }
 .products {
-    padding: px2rem(70);
+    padding: px2rem(42) px2rem(59);
 
     &__container {
         background-color: #F8F5F0;
@@ -255,4 +255,58 @@ body {
         }
     }
     
+}
+
+.carousel {
+    padding-bottom: px2rem(30);
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: px2rem(130);
+        align-items: center;
+    }
+    &__img  {
+        width: px2rem(830);
+        height: px2rem(490);
+        object-fit: cover;
+    }
+    &__title {
+        margin: 0 0 px2rem(16);
+        font-family: 'Raleway';
+        color: #844A28;
+        font-size: px2rem(48);
+        font-style: italic;
+    }
+    &__button {
+        font-family: 'Raleway';
+        color: white;
+        background-color: #844A28;
+        border: px2rem(1) solid white;
+        padding: px2rem(10) px2rem(68);
+        font-size: px2rem(17);
+        font-weight: 300;
+        cursor: pointer;
+        &:hover {
+            background-color: white;
+            border: px2rem(1) solid #844A28;
+            color: #844A28;
+            font-weight: 700;
+            transition: 1s;
+        }
+    }
+    &__arrows {
+        text-align: center;
+        margin: px2rem(81) 0 0;
+    }
+    &__arrow {
+        color: black;
+        margin-right: px2rem(45);
+        font-size: px2rem(32);
+        &:hover {
+            color: #844A28;
+            cursor: pointer;
+        }
+    }
+   
 }
