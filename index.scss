@@ -278,7 +278,8 @@ body {
         font-size: px2rem(48);
         font-style: italic;
     }
-    &__button {
+    &__a {
+        text-decoration: none;
         font-family: 'Raleway';
         color: white;
         background-color: #844A28;
@@ -298,6 +299,10 @@ body {
     &__arrows {
         text-align: center;
         margin: px2rem(81) 0 0;
+    }
+    &__btn {
+        background: transparent;
+        border: none;
     }
     &__arrow {
         color: black;
