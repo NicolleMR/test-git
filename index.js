@@ -4,17 +4,17 @@ const header = document.querySelector('.header');
 
 const cards = [ {
     id: 1,
-    img: 'assets/imagines/photo2.jpg',
+    img: './images/photo2.jpg',
     buttonText: "Shop Livingroom"
 },
 {
     id: 2,
-    img: 'assets/imagines/photo3.jpg',
+    img: './images/photo3.jpg',
     buttonText: "Shop fireplace"
 },
 {
     id: 1,
-    img: 'assets/imagines/photo4.jpg',
+    img: './images/photo4.jpg',
     buttonText: "Shop paintings"
 }
 ];
