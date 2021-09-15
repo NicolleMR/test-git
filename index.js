@@ -21,6 +21,38 @@ const cards = [ {
 
 const arrowPrevious = document.querySelector('.js-previous')
 const arrowPrevious = document.querySelector('.js-next')
+const button = document.querySelector('.carousel__button')
+const img = document.querySelector('.carousel__img');
+
+let currentItem = 0;
+
+function showImage() {
+    const item = cards[currentItem];
+    img.src = item.img;
+    button.textContent = item.text;
+};
+
+nextRight.addEventListener('click', () => {
+    currentItem++;
+    if (currentItem > cards.length -1) {
+        currentItem = 0;
+    }
+    showImage();
+});
+
+prevBtn.addEventListener('click', () => {
+    currentItem--;
+    if (currentItem < 0) {
+        currentItem = cards.length -1
+    }
+    showImage();
+});
+
+randomBtn.addEventListener('click', () => {
+    currentItem = Math.floor(Math.random() * cards.length);
+    console.log(currentItem);
+    showImage();
+})
 
 hamburguerBtn.addEventListener('click',() => {
     if (slideBar.classList.contains('show-slidebar')) {
