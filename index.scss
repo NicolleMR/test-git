@@ -1,3 +1,5 @@
+$backgroundGrey: #F8F5F0;
+$lightPink: #844A28;
 $baseFontSize: 16;
 @function px2rem($px){
     @return $px / $baseFontSize * 1rem;
@@ -138,8 +140,8 @@ body {
     }
     &__title {
         font-size: px2rem(54.4);
-        color: #663131;
-        border: px2rem(2) solid #663131;
+        color: $lightPink;
+        border: px2rem(2) solid $lightPink;
         padding: px2rem(16) px2rem(48);
         font-style: italic;
         margin: px2rem(176) 0 px2rem(48);
@@ -176,14 +178,14 @@ body {
     padding: px2rem(42) px2rem(59);
 
     &__container {
-        background-color: #F8F5F0;
+        background-color: $backgroundGrey;
         padding: 0 px2rem(48) px2rem(48);
         @media (max-width: 800px) {
             padding: 0;
         }
     }
     &__title {
-        color: #844A28;
+        color: $lightPink;
         font-style: italic;
         font-size: px2rem(44.8);
         text-align: center;
@@ -219,14 +221,14 @@ body {
     &__name {
         font-size: px2rem(29);
         font-family: 'Raleway';
-        color: #844A28;
+        color: $lightPink;
         
     }
     &__span {
         font-size: px2rem(17);
         font-weight: bold;
         font-family: 'Raleway';
-        color: #844A28;
+        color: $lightPink;
     }
     &__price {
         position: relative;
@@ -234,7 +236,7 @@ body {
         line-height: px2rem(50);
         font-weight: bold;
         font-family: 'Raleway';
-        color: #844A28;
+        color: $lightPink;
         padding-left: px2rem(14);
         &::before {
             content: "$";
@@ -274,7 +276,7 @@ body {
     &__title {
         margin: 0 0 px2rem(16);
         font-family: 'Raleway';
-        color: #844A28;
+        color: $lightPink;
         font-size: px2rem(48);
         font-style: italic;
     }
@@ -282,7 +284,7 @@ body {
         text-decoration: none;
         font-family: 'Raleway';
         color: white;
-        background-color: #844A28;
+        background-color: $lightPink;
         border: px2rem(1) solid white;
         padding: px2rem(10) px2rem(68);
         font-size: px2rem(17);
@@ -290,15 +292,15 @@ body {
         cursor: pointer;
         &:hover {
             background-color: white;
-            border: px2rem(1) solid #844A28;
-            color: #844A28;
+            border: px2rem(1) solid $lightPink;
+            color: $lightPink;
             font-weight: 700;
             transition: 1s;
         }
     }
     &__arrows {
         text-align: center;
-        margin: px2rem(81) 0 0;
+        margin: px2rem(36) 0 0;
     }
     &__btn {
         background: transparent;
@@ -309,9 +311,71 @@ body {
         margin-right: px2rem(45);
         font-size: px2rem(32);
         &:hover {
-            color: #844A28;
+            color: $lightPink;
             cursor: pointer;
         }
     }
    
+}
+.menu {
+    background-color: $backgroundGrey;
+    font-family: 'Raleway';
+    margin: 0 px2rem(61);
+
+    &__title {
+        text-align: center;
+        color: $lightPink;
+        font-weight: 400;
+        margin: 0;
+        padding: px2rem(38) 0;
+        font-size: px2rem(33);
+    }
+    &__buttons {
+        text-align: center;
+    }
+    &__filter-btn {
+        border: px2rem(1) solid $lightPink;
+        background-color: white;
+        color: $lightPink;
+        padding: px2rem(7) px2rem(20);
+        font-size: px2rem(18);
+        &:not(:last-child) {
+            margin-right: px2rem(65);
+        }
+        &:hover {
+            background-color: $lightPink;
+            border: px2rem(1) solid $lightPink;
+            color: white;
+            transition: 1s;
+        }
+    }
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: px2rem(34) px2rem(32);
+        text-align: center;
+        padding: px2rem(53) px2rem(60);
+
+    }
+    &__img {
+        width: 100%;
+        height: px2rem(268);
+        object-fit: cover;
+    }
+    &__h4 {
+        color: $lightPink;
+        font-size: px2rem(20);
+        margin: px2rem(15) 0 px2rem(5);
+    }
+    &__price {
+        color: $lightPink;
+        font-size: px2rem(16);
+    }
+    &__item-text {
+        width: px2rem(268);
+        text-align: center;
+        margin: px2rem(7) auto 0;
+        color: $lightPink;
+        font-weight: 400;
+    }
 }
