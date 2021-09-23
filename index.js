@@ -21,8 +21,8 @@ window.addEventListener('scroll',() => {
 
 const arrowPrevious = document.querySelector('.js-previous')
 const arrowNext = document.querySelector('.js-next')
-const button = document.querySelector('.carousel__button')
-const img = document.querySelector('.carousel__img');
+const carouselButton = document.querySelector('.carousel__button')
+const carouselImg = document.querySelector('.carousel__img');
 
 const cards = [ {
     id: 1,
@@ -45,8 +45,8 @@ let currentItem = 0;
 
 function showImage() {
     const item = cards[currentItem];
-    img.src = item.img;
-    button.textContent = item.buttonText;
+    carouselImg.src = item.img;
+    carouselButton.textContent = item.buttonText;
 };
 
 arrowNext.addEventListener('click', () => {
@@ -70,7 +70,7 @@ const menu = [
       id: 1,
       title: "Candles",
       category: "candles",
-      price,
+      price: 20,
       img: "./images/filter1.jpg",
       desc: `Lorem ipsum dolor sit amet consectetur, adipisicing elit.`,
     },
