@@ -1,5 +1,5 @@
 $backgroundGrey: #F8F5F0;
-$lightPink: #844A28;
+$lightbrow: #844A28;
 $baseFontSize: 16;
 @function px2rem($px){
     @return $px / $baseFontSize * 1rem;
@@ -38,6 +38,12 @@ $baseFontSize: 16;
     font-family: 'Raleway';
     src: url('./fonts/Raleway-Thin.ttf') format("truetype");
     font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GreatVibes';
+    src: url("./fonts/GreatVibes-Regular.ttf") format("truetype");
+    font-weight: 400;
     font-style: normal;
 }
 html {
@@ -140,8 +146,8 @@ body {
     }
     &__title {
         font-size: px2rem(54.4);
-        color: $lightPink;
-        border: px2rem(2) solid $lightPink;
+        color: $lightbrow;
+        border: px2rem(2) solid $lightbrow;
         padding: px2rem(16) px2rem(48);
         font-style: italic;
         margin: px2rem(176) 0 px2rem(48);
@@ -185,7 +191,7 @@ body {
         }
     }
     &__title {
-        color: $lightPink;
+        color: $lightbrow;
         font-style: italic;
         font-size: px2rem(44.8);
         text-align: center;
@@ -221,14 +227,14 @@ body {
     &__name {
         font-size: px2rem(29);
         font-family: 'Raleway';
-        color: $lightPink;
+        color: $lightbrow;
         
     }
     &__span {
         font-size: px2rem(17);
         font-weight: bold;
         font-family: 'Raleway';
-        color: $lightPink;
+        color: $lightbrow;
     }
     &__price {
         position: relative;
@@ -236,7 +242,7 @@ body {
         line-height: px2rem(50);
         font-weight: bold;
         font-family: 'Raleway';
-        color: $lightPink;
+        color: $lightbrow;
         padding-left: px2rem(14);
         &::before {
             content: "$";
@@ -276,7 +282,7 @@ body {
     &__title {
         margin: 0 0 px2rem(16);
         font-family: 'Raleway';
-        color: $lightPink;
+        color: $lightbrow;
         font-size: px2rem(48);
         font-style: italic;
     }
@@ -284,7 +290,7 @@ body {
         text-decoration: none;
         font-family: 'Raleway';
         color: white;
-        background-color: $lightPink;
+        background-color: $lightbrow;
         border: px2rem(1) solid white;
         padding: px2rem(10) px2rem(68);
         font-size: px2rem(17);
@@ -292,8 +298,8 @@ body {
         cursor: pointer;
         &:hover {
             background-color: white;
-            border: px2rem(1) solid $lightPink;
-            color: $lightPink;
+            border: px2rem(1) solid $lightbrow;
+            color: $lightbrow;
             font-weight: 700;
             transition: 1s;
         }
@@ -311,7 +317,7 @@ body {
         margin-right: px2rem(45);
         font-size: px2rem(32);
         &:hover {
-            color: $lightPink;
+            color: $lightbrow;
             cursor: pointer;
         }
     }
@@ -324,7 +330,7 @@ body {
 
     &__title {
         text-align: center;
-        color: $lightPink;
+        color: $lightbrow;
         font-weight: 400;
         margin: 0;
         padding: px2rem(38) 0;
@@ -334,17 +340,17 @@ body {
         text-align: center;
     }
     &__filter-btn {
-        border: px2rem(1) solid $lightPink;
+        border: px2rem(1) solid $lightbrow;
         background-color: white;
-        color: $lightPink;
+        color: $lightbrow;
         padding: px2rem(7) px2rem(20);
         font-size: px2rem(18);
         &:not(:last-child) {
             margin-right: px2rem(65);
         }
         &:hover {
-            background-color: $lightPink;
-            border: px2rem(1) solid $lightPink;
+            background-color: $lightbrow;
+            border: px2rem(1) solid $lightbrow;
             color: white;
             transition: 1s;
         }
@@ -363,19 +369,93 @@ body {
         object-fit: cover;
     }
     &__h4 {
-        color: $lightPink;
+        color: $lightbrow;
         font-size: px2rem(20);
         margin: px2rem(15) 0 px2rem(5);
     }
     &__price {
-        color: $lightPink;
+        color: $lightbrow;
         font-size: px2rem(16);
     }
     &__item-text {
         width: px2rem(268);
         text-align: center;
         margin: px2rem(7) auto 0;
-        color: $lightPink;
+        color: $lightbrow;
         font-weight: 400;
+    }
+}
+.faq {
+
+    &__title {
+        font-family: GreatVibes;
+        color: $lightbrow;
+        text-align: center;
+        font-size: px2rem(50);
+        margin: 0;
+        padding: px2rem(52) 0;
+        letter-spacing: px2rem(5);
+    }
+    &__container {
+        text-align: center;
+    }
+    &__box {
+        border: px2rem(1) solid $lightbrow;
+        max-width: 55%;
+        margin: 0 auto px2rem(50);
+        position: relative;
+        box-shadow: 0 px2rem(2) px2rem(8) rgba(0, 0, 0, 5%);
+    }
+    &__question {
+        color: $lightbrow;
+        font-family: 'Raleway';
+        font-weight: 500;
+        margin: px2rem(12) 0 px2rem(16);
+    }
+    &__btn {
+        position: absolute;
+        top: px2rem(-2);
+        right: px2rem(9);
+        border: transparent;
+        background-color: transparent;
+        padding: px2rem(8) px2rem(3);
+    }
+    &__btn i {
+        color: $lightbrow;
+        font-size: px2rem(20);
+        cursor: pointer;
+        outline: none;
+        &:hover {
+            color: black;
+        }
+    }
+    &__close {
+        &.hide-icon {
+            display: none;
+        }
+    }
+    &__arrow {
+        display: none;
+        i {
+            font-size: px2rem(25);
+        }
+        &.show-icon {
+            display: inline;
+        }
+    }
+    &__answer {
+        color: #A9A9A9;
+        font-family: 'Raleway';
+        margin: px2rem(15) auto;
+        letter-spacing: px2rem(2);
+        text-align: justify;
+        padding: px2rem(20) 0 px2rem(24) 0;
+        border-top: px2rem(1) solid $lightbrow;
+        max-width: 80%;
+        display: none;
+
+        &.show-answer {
+            display: block;
+        }
     }
 }
