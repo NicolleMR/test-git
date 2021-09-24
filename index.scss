@@ -385,7 +385,7 @@ body {
         font-weight: 400;
     }
 }
-.questions {
+.faq {
 
     &__title {
         font-family: GreatVibes;
@@ -399,14 +399,14 @@ body {
     &__container {
         text-align: center;
     }
-    &__wrap {
+    &__box {
         border: px2rem(1) solid $lightbrow;
         max-width: 55%;
         margin: 0 auto px2rem(50);
         position: relative;
         box-shadow: 0 px2rem(2) px2rem(8) rgba(0, 0, 0, 5%);
     }
-    &__info {
+    &__question {
         color: $lightbrow;
         font-family: 'Raleway';
         font-weight: 500;
@@ -424,28 +424,25 @@ body {
         color: $lightbrow;
         font-size: px2rem(20);
     }
-    &__arw i {
+    &__arrow i {
         font-size: px2rem(25);
         display: none;
     }
-    &__text {
-        padding: 0 0 px2rem(24) 0;
-        border-top: px2rem(1) solid $lightbrow;
-        max-width: 80%;
-        margin: auto;
-        display: none;
-    }
-    &__paragraph {
+    &__answer {
         color: #A9A9A9;
         font-family: 'Raleway';
         margin: px2rem(15) auto;
         letter-spacing: px2rem(2);
         text-align: justify;
+        padding: px2rem(20) 0 px2rem(24) 0;
+        border-top: px2rem(1) solid $lightbrow;
+        max-width: 80%;
+        display: none;
     }
-    .show-text .questions__text {
+    .show-text .questions__answer {
         display: block;
     }
-    .show-text .question__arw {
+    .show-text .question__arrow {
         display: inline;
     }
     .show-text .question__close {
