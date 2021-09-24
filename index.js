@@ -174,6 +174,8 @@ window.addEventListener('DOMContentLoaded', () => {
 filterBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
         const categoryBtn = btn.dataset.id;
+        filterBtns.forEach((b) => b.classList.remove("keeping-the-color"));
+        btn.classList.add('keeping-the-color');
         const filteredMenu = menu.filter((menuItem) => {
             if (categoryBtn === "all") {
                 return true;
