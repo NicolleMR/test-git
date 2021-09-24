@@ -423,10 +423,25 @@ body {
     &__btn i {
         color: $lightbrow;
         font-size: px2rem(20);
+        cursor: pointer;
+        outline: none;
+        &:hover {
+            color: black;
+        }
     }
-    &__arrow i {
-        font-size: px2rem(25);
+    &__close {
+        &.hide-icon {
+            display: none;
+        }
+    }
+    &__arrow {
         display: none;
+        i {
+            font-size: px2rem(25);
+        }
+        &.show-icon {
+            display: inline;
+        }
     }
     &__answer {
         color: #A9A9A9;
@@ -438,14 +453,9 @@ body {
         border-top: px2rem(1) solid $lightbrow;
         max-width: 80%;
         display: none;
-    }
-    .show-text .questions__answer {
-        display: block;
-    }
-    .show-text .question__arrow {
-        display: inline;
-    }
-    .show-text .question__close {
-        display: none;
+
+        &.show-answer {
+            display: block;
+        }
     }
 }

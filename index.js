@@ -172,8 +172,8 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 filterBtns.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-        const categoryBtn = e.currentTarget.dataset.id;
+    btn.addEventListener('click', () => {
+        const categoryBtn = btn.dataset.id;
         const filteredMenu = menu.filter((menuItem) => {
             if (categoryBtn === "all") {
                 return true;
@@ -203,3 +203,16 @@ function sectionMenuItems(theMenu) {
     htmlMenu = htmlMenu.join("");
     sectionCenter.innerHTML = htmlMenu;
 };
+
+const questionButton = document.querySelectorAll('.faq__btn');
+
+questionButton.forEach((btn) => {
+    btn.addEventListener('click', () => {        
+        const closeIcon = btn.querySelector('.faq__close');
+        const arrowIcon = btn.querySelector('.faq__arrow');
+        const answer = btn.nextElementSibling;
+        answer.classList.toggle('show-answer');
+        closeIcon.classList.toggle('hide-icon');
+        arrowIcon.classList.toggle('show-icon');
+    });
+});
