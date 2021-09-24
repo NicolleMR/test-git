@@ -354,6 +354,11 @@ body {
             color: white;
             transition: 1s;
         }
+
+        &.keeping-the-color {
+            background-color: $lightbrow;
+            color: white;
+        }
     }
     &__container {
         display: grid;
