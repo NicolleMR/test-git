@@ -525,13 +525,13 @@ body {
     &__terms {
         text-align: center;
     }
-    &__anc-term {
+    &__terms-links {
         color: white;
         font-family: 'Raleway';
         letter-spacing: px2rem(1);
         font-size: px2rem(14);
     }
-    &__anc-term--no-underline {
+    &__terms-links--no-underline {
         text-decoration: none;
     }
 }
