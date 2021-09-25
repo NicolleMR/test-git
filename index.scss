@@ -391,7 +391,6 @@ body {
     }
 }
 .faq {
-
     &__title {
         font-family: GreatVibes;
         color: $lightbrow;
@@ -462,5 +461,77 @@ body {
         &.show-answer {
             display: block;
         }
+    }
+}
+.footer {
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    padding: px2rem(34) 0;
+    margin-top: px2rem(120);
+
+    &__container-ancor {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    &__links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: px2rem(79);
+        a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Raleway';
+            &:not(:last-child) {
+                margin-bottom: px2rem(20);
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__img {
+        width: px2rem(150);
+        height: px2rem(150);
+        border-radius: 50%;
+        margin: 0 0 px2rem(17) px2rem(100);
+    }
+    &__social-media {
+        margin-left: px2rem(120);
+
+        a {
+            &:not(:last-child) {
+                margin-right: px2rem(20);
+            }
+        }
+        i {
+            color: white;
+            font-size: px2rem(25);
+            cursor: pointer;
+        }
+    }
+    &__politics {
+        border-top: px2rem(1) solid white;
+        max-width: 90%;
+        margin: px2rem(38) auto 0;
+    }
+    &__text {
+        margin: px2rem(31) 0 px2rem(36);
+        text-align: center;
+        color: white;
+        font-family: 'Raleway';
+        letter-spacing: px2rem(2);
+        font-size: px2rem(17);
+    }
+    &__terms {
+        text-align: center;
+    }
+    &__anc-term {
+        color: white;
+        font-family: 'Raleway';
+        letter-spacing: px2rem(1);
+        font-size: px2rem(14);
+    }
+    &__anc-term--ancor {
+        text-decoration: none;
     }
 }
